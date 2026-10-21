@@ -82,7 +82,7 @@ nav a:hover, nav a[aria-current="page"] { color: var(--fg); }
 .files li { border-top: 1px solid var(--line); }
 .files li:last-child { border-bottom: 1px solid var(--line); }
 .files a {
-  display: grid; grid-template-columns: 92px minmax(0, 1fr) auto; gap: 20px; align-items: baseline;
+  display: grid; grid-template-columns: 64px 104px minmax(0, 1fr) auto; gap: 20px; align-items: center;
   padding-block: 22px; text-decoration: none;
 }
 .files a:hover h3 { color: var(--accent); }
@@ -101,6 +101,13 @@ nav a:hover, nav a[aria-current="page"] { color: var(--fg); }
 .ep b { font: 500 23px/1.25 var(--display); }
 .ep span:last-child { color: var(--muted); font-size: 15px; }
 .ep:hover b { color: var(--accent); }
+
+/* Görseller */
+.thumb { width: 64px; height: 80px; object-fit: cover; border-radius: 2px; background: var(--surface); display: block; }
+.ep img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: center 40%; border-radius: 2px; display: block; margin-bottom: 6px; }
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 320px); gap: 48px; align-items: start; max-width: none !important; }
+.hero figure { margin: 0; }
+.hero figure img { width: 100%; height: auto; border-radius: 2px; display: block; box-shadow: 0 12px 40px rgba(0,0,0,.28); }
 
 /* Güven bloğu */
 .trust { background: var(--surface); }
@@ -148,8 +155,12 @@ footer a:hover { color: var(--fg); }
   .intro { padding-block: 48px 40px; }
   .method { grid-template-columns: minmax(0, 1fr); }
   .method div, .method div + div { padding: 22px 0; border-right: 0; border-bottom: 1px solid var(--line); }
-  .files a { grid-template-columns: minmax(0, 1fr) auto; gap: 8px 14px; }
-  .files .no { grid-column: 1 / -1; }
+  .files a { grid-template-columns: 56px minmax(0, 1fr); gap: 4px 14px; align-items: start; }
+  .files .thumb { width: 56px; height: 70px; grid-row: 1 / span 3; }
+  .files .no { grid-column: 2; }
+  .files .status { grid-column: 2; justify-self: start; }
+  .hero { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .hero figure { max-width: 300px; }
   .trust .wrap, .series .wrap { grid-template-columns: minmax(0, 1fr); gap: 16px; }
   .series .wrap { gap: 24px; }
   nav { gap: 16px; }
