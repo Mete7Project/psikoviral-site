@@ -10,3 +10,8 @@
 @media(max-width:980px){.question-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:680px){.cover-story{height:385px}.cover-story>img{transform:scale(1.12)}.cover-story:hover>img{transform:scale(1.14)}}
 @media(max-width:370px){.cover-story{height:360px}}
+
+/* Dokunma alanı düzeltmesi (denetim, 28 Ekim) — küçük bağlantılar en az ~40px dokunma yüksekliği alır */
+.site-footer a, .toc a, .text-link, .read-link, .publication-link, .reel-web, .reel-platform, .card-link, .meta a {
+  display: inline-block; padding-block: 10px;
+}
